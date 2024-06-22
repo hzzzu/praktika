@@ -5,7 +5,7 @@ from django.shortcuts import render
 def index(request):
     context: dict[str, str] = {
         'title': 'IGNIS - Главная',
-        'sale': '-60% НА КОЛЛЕКЦИЮ VITTORIA VICCI',
+        'sale': '-70% НА КОЛЛЕКЦИЮ VITTORIA VICCI',
         'year': '2024',
         }
     return render(request, 'main/index.html', context)
