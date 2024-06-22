@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages', #сообщения 
     'django.contrib.staticfiles', #статические файлы (картинки, css и т.д)
     
-    'main', 
+    'main',
+    'goods', 
 ]
 
 MIDDLEWARE = [
