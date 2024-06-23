@@ -11,10 +11,16 @@
 		<section class="main">
 			<div class="container">
 				<div class="main-flex">
-					<img src="{% static "deps/media/main/section_main/Девушка_Наушники.jpg" %}" alt="" class="main-avatar">
-					<img src="{% static "deps/media/main/section_main/Девушка_Ушанка1.jpg" %}" alt="" class="main-avatar">
-					<img src="{% static "deps/media/main/section_main/Девушка_Кепка.jpg" %}" alt="" class="main-avatar">
-					<p class="main-overlay">{{ sale }}</p>	{% comment %} динамическое обновление надписи должно быть{% endcomment %}
+					<div class="main-img">
+						<img src="{% static "deps/media/main/section_main/Девушка_Наушники.jpg" %}" alt="" class="main-avatar">
+					</div>
+					<div class="main-img">
+						<img src="{% static "deps/media/main/section_main/Девушка_Ушанка1.jpg" %}" alt="" class="main-avatar">
+					</div>
+					<div class="main-img">
+						<img src="{% static "deps/media/main/section_main/Девушка_Кепка.jpg" %}" alt="" class="main-avatar">
+					</div>
+					<p class="main-overlay">{{ sale }}</p>
 				</div>
 			</div>
 		</section>

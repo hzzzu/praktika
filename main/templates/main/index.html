@@ -1,4 +1,4 @@
-{% extends "main/base.html" %}
+{% extends "base.html"%}
 {% load static %} 
 
 {% block head %}
@@ -37,7 +37,7 @@
 			</div>
 			<nav class="header-menu-right">
 				<ul class="header-menu-list">
-					<li class="header-menu-item"><a class="header-menu-link" href="{% url "main:login" %}"><i class="fa-solid fa-right-to-bracket"></i> Войти</a></li>
+					<li class="header-menu-item"><a class="header-menu-link" href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i> Войти</a></li>
 					<li class="header-menu-item"><a class="header-menu-link" href="#"><i class="fa-solid fa-cart-shopping"></i> корзина</a></li>
 				</ul>
 			</nav>
@@ -85,9 +85,7 @@
 			</div>
 		</div>
 		<div class="line">
-			<svg width="1920" height="2" viewBox="0 0 1920 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path d="M0 1H1828" stroke="#666666" />
-			  </svg>
+
 		</div>
 		<div class="footer-subtitle">
 			Copyright © {{ year }} The IGNIS. All Rights Reserved.
