@@ -45,15 +45,18 @@
 	<main>
 		<section class="login">
 			<div class="login-flex">
-				<form action="" class="login-form">
-					<h1 class="login-title">
+				<form action="{% url "user:login" %}" method="post" class="login-form">
+					{% csrf_token %}
+
+					 <h1 class="login-title">
 						Авторизация
 					</h1>
 					<div class="login-email">
-						<input type="text" placeholder="Введите email или номер телефона" required>
+						<label for="id_username"></label>
+						<input type="text" name="username" id="id_username" value="{% if form.username.value %}{{ form.username.value }}{% endif %}" placeholder="Введите имя пользователя" required>
 					</div>
 					<div class="login-password">
-						<input type="password" placeholder="Введите пароль" required>
+						<input type="password" name="password" id="id_password" placeholder="Введите пароль" required>
 						<a href=""><i class="fa-solid fa-eye fa-xl"></i></a>
 					</div>
 					<div class="login-remember">
@@ -61,15 +64,15 @@
 							<input type="checkbox" name="" id=""> Запомнить пароль
 						</label>
 						<a href="#">Забыли пароль?</a>
-					</div>
-					<a href="{% url "users:profile" %}" type="submit" class="login-button button">
+					</div> 
+					 <button type="submit" class="login-button button">
 						Войти
-					</a>
-					<div class="login-link">
+					</button> 
+					 <div class="login-link">
 						<p class="login-text">
 							<a href="{% url "users:registration" %}">Зарегистрироваться</a>
 						</p>
-					</div>
+					</div> 
 				</form>
 			</div>
 		</section>

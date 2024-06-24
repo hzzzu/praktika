@@ -9,6 +9,3 @@ def index(request):
         'year': '2024',
         }
     return render(request, 'main/index.html', context)
-
-def login(request):
-    return render(request, 'main/login.html')
