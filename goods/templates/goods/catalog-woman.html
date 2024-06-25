@@ -58,22 +58,9 @@
 						</nav>
 						<div class="catalog-woman-menu-items">
 							<ul class="catalog-woman-menu-list">
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Новое</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Бандана</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Берет</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Вуалетка</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Жокейка</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Картуз</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Каска</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Кепка</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Кепи</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Капор</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Панама</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Наушники</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Шапка-ушанка</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Шапка</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Шляпа</a></li>
-								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">Посмотреть всё</a></li>
+								{% for category in categories %}
+								<li class="catalog-woman-menu-item"><a href="{% url "goods:product" %}" class="catalog-woman-menu-link">{{category}}</a></li>
+								{% endfor %}						
 							</ul>
 						</div>
 					</div>

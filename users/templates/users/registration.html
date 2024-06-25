@@ -45,42 +45,56 @@
 	<main>
 		<section class="registr">
 			<div class="registr-flex">
-				<form action="{% url "user:registration" %}" metod="post" class="registr-form">
+				<form action="{% url 'user:registration' %}" method="POST" class="registr-form">
 					{% csrf_token %}
-					<h1 class="registr-title">
-						Регистрация
-					</h1>
+					<h1 class="registr-title">Регистрация</h1>
 					<div class="registr-email">
 						<label for="id_username"></label>
 						<input type="text" id="id_username" name="username" 
-						value="{% if form.username.value %}{{ form.username.value }}{% endif %}" 
-						placeholder="Имя пользователя" required>
-						{% if form.username.errors %}
-						<div class="alert ">
-						<p class="">
-							Что-то не так
-						</p></div>
-						{% endif %}
+							   value="{{ form.username.value|default_if_none:'' }}" 
+							   placeholder="Имя пользователя" required>
 					</div>
-					{% comment %} <div class="registr-email">
+					{% for error in form.username.errors %}
+					<div class="alert">
+						<p>{{ error }}</p>
+					</div>
+					{% endfor %}
+					<div class="registr-email">
 						<label for="id_phone_number"></label>
-						<input type="tel" id="id_phone_number"  name="phone_number"
-						value="{% if form.phone_number.value %}{{ form.phone_number.value }}{% endif %}"  placeholder="Номер телефона" required>
-					</div> {% endcomment %}
+						<input type="tel" id="id_phone_number" name="phone_number"
+							   value="{{ form.phone_number.value|default_if_none:'' }}" 
+							   placeholder="Номер телефона" required>
+					</div>
+					{% for error in form.phone_number.errors %}
+					<div class="alert">
+						<p>{{ error }}</p>
+					</div>
+					{% endfor %}
 					<div class="registr-email">
 						<label for="id_password1"></label>
 						<input type="password" id="id_password1" name="password1"
-						value="{% if form.password1.value %}{{ form.password1.value }}{% endif %}"  placeholder="Пароль" required>
+							   value="{{ form.password1.value|default_if_none:'' }}" 
+							   placeholder="Пароль" required>
 					</div>
+					{% for error in form.password1.errors %}
+					<div class="alert">
+						<p>{{ error }}</p>
+					</div>
+					{% endfor %}
 					<div class="registr-email">
 						<label for="id_password2"></label>
 						<input type="password" id="id_password2" name="password2"
-						value="{% if form.password2.value %}{{ form.password2.value }}{% endif %}"  placeholder="Подтвердите пароль" required>
+							   value="{{ form.password2.value|default_if_none:'' }}" 
+							   placeholder="Подтвердите пароль" required>
 					</div>
-					<button type="submit" class="registr-button button">
-						Зарегистрироваться
-					</button> 
+					{% for error in form.password2.errors %}
+					<div class="alert">
+						<p>{{ error }}</p>
+					</div>
+					{% endfor %}
+					<button type="submit" class="registr-button button">Зарегистрироваться</button>
 				</form>
+				
 			</div>
 		</section>
 	</main>

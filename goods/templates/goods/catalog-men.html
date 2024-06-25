@@ -58,22 +58,11 @@
 						</nav>
 						<div class="catalog-men-menu-items">
 							<ul class="catalog-men-menu-list">
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Новое</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Бандана</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Берет</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Вуалетка</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Жокейка</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Картуз</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Каска</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Кепка</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Кепи</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Капор</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Панама</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Наушники</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Шапка-ушанка</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Шапка</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Шляпа</a></li>
-								<li class="catalog-men-menu-item"><a href="{% url "goods:product" %}" class="catalog-men-menu-link">Посмотреть всё</a></li>
+								{% for category in categories %}
+								<li class="catalog-men-menu-item">
+									<a href="{% url "goods:product" %}" class="catalog-men-menu-link">{{category}}</a>
+								</li>
+								{% endfor %}	
 							</ul>
 						</div>
 					</div>

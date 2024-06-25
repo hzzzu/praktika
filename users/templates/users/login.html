@@ -45,35 +45,57 @@
 	<main>
 		<section class="login">
 			<div class="login-flex">
-				<form action="{% url "user:login" %}" method="post" class="login-form">
+				<form action="{% url 'user:login' %}" method="post" class="login-form">
 					{% csrf_token %}
-
-					 <h1 class="login-title">
-						Авторизация
-					</h1>
+					<h1 class="login-title">Авторизация</h1>
+					
+					{% if form.non_field_errors %}
+						<div class="alert">
+							{% for error in form.non_field_errors %}
+								<p>{{ error }}</p>
+							{% endfor %}
+						</div>
+					{% endif %}
+					
 					<div class="login-email">
 						<label for="id_username"></label>
-						<input type="text" name="username" id="id_username" value="{% if form.username.value %}{{ form.username.value }}{% endif %}" placeholder="Введите имя пользователя" required>
+						<input type="text" name="username" id="id_username" 
+							   value="{{ form.username.value|default_if_none:'' }}" 
+							   placeholder="Введите имя пользователя" required>
+						{% for error in form.username.errors %}
+							<div class="alert">
+								<p>{{ error }}</p>
+							</div>
+						{% endfor %}
 					</div>
+					
 					<div class="login-password">
-						<input type="password" name="password" id="id_password" placeholder="Введите пароль" required>
-						<a href=""><i class="fa-solid fa-eye fa-xl"></i></a>
+						<input type="password" name="password" id="id_password" 
+							   placeholder="Введите пароль" required>
+						{% for error in form.password.errors %}
+							<div class="alert">
+								<p>{{ error }}</p>
+							</div>
+						{% endfor %}
+						<a href="#"><i class="fa-solid fa-eye fa-xl"></i></a>
 					</div>
+					
 					<div class="login-remember">
-						<label for="">
-							<input type="checkbox" name="" id=""> Запомнить пароль
+						<label>
+							<input type="checkbox" name="remember_me" id="remember_me"> Запомнить пароль
 						</label>
 						<a href="#">Забыли пароль?</a>
 					</div> 
-					 <button type="submit" class="login-button button">
-						Войти
-					</button> 
-					 <div class="login-link">
+					
+					<button type="submit" class="login-button button">Войти</button> 
+					
+					<div class="login-link">
 						<p class="login-text">
-							<a href="{% url "users:registration" %}">Зарегистрироваться</a>
+							<a href="{% url 'users:registration' %}">Зарегистрироваться</a>
 						</p>
 					</div> 
 				</form>
+				
 			</div>
 		</section>
 	</main>
