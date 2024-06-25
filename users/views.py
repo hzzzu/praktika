@@ -69,7 +69,9 @@ def profile(request):
     return render(request, 'users/profile.html', context)
 
 
-# def logout(request):
+def logout(request):
+    auth.logout(request)
+    return redirect(reverse('main.index'))
 #     context = {
 #         'title': 'Home - Выход'
 #     }
