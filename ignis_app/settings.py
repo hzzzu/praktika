@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'main',
     'goods',
     'users',
-    # 'carts',
+    'carts',
 ]
 
 MIDDLEWARE = [
@@ -86,7 +86,7 @@ DATABASES = {
         'NAME': 'ignisShopDB',
         'USER': 'arthicsu',
         'PASSWORD': 'ZAQ123wsx',
-        'HOST': 'localhost',
+        'HOST': '26.214.128.141',
         'PORT': '5432',
     }
 }
