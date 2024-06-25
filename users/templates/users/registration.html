@@ -45,19 +45,41 @@
 	<main>
 		<section class="registr">
 			<div class="registr-flex">
-				<form action="" class="registr-form">
+				<form action="{% url "user:registration" %}" metod="post" class="registr-form">
+					{% csrf_token %}
 					<h1 class="registr-title">
 						Регистрация
 					</h1>
 					<div class="registr-email">
-						<input type="text" placeholder="Имя пользователя" required>
+						<label for="id_username"></label>
+						<input type="text" id="id_username" name="username" 
+						value="{% if form.username.value %}{{ form.username.value }}{% endif %}" 
+						placeholder="Имя пользователя" required>
+						{% if form.username.errors %}
+						<div class="alert ">
+						<p class="">
+							Что-то не так
+						</p></div>
+						{% endif %}
+					</div>
+					{% comment %} <div class="registr-email">
+						<label for="id_phone_number"></label>
+						<input type="tel" id="id_phone_number"  name="phone_number"
+						value="{% if form.phone_number.value %}{{ form.phone_number.value }}{% endif %}"  placeholder="Номер телефона" required>
+					</div> {% endcomment %}
+					<div class="registr-email">
+						<label for="id_password1"></label>
+						<input type="password" id="id_password1" name="password1"
+						value="{% if form.password1.value %}{{ form.password1.value }}{% endif %}"  placeholder="Пароль" required>
 					</div>
 					<div class="registr-email">
-						<input type="password" placeholder="Пароль" required>
+						<label for="id_password2"></label>
+						<input type="password" id="id_password2" name="password2"
+						value="{% if form.password2.value %}{{ form.password2.value }}{% endif %}"  placeholder="Подтвердите пароль" required>
 					</div>
-					<a href="profile.html" type="submit" class="registr-button button">
+					<button type="submit" class="registr-button button">
 						Зарегистрироваться
-					</a>
+					</button> 
 				</form>
 			</div>
 		</section>
