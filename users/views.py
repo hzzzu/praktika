@@ -63,7 +63,3 @@ def profile(request):
 def logout(request):
     auth.logout(request)
     return redirect(reverse('main:index'))
-#     context = {
-#         'title': 'Home - Выход'
-#     }
-#     return render(request, 'users/logout.html', context)
