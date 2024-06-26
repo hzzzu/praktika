@@ -35,8 +35,16 @@
 				</div>
 				<nav class="header-menu-right">
 					<ul class="header-menu-list">
-						<li class="header-menu-item"><a class="header-menu-link" href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i> Войти</a></li>
-						<li class="header-menu-item"><a class="header-menu-link" href="#"><i class="fa-solid fa-cart-shopping"></i> корзина</a></li>
+						{% if not user.is_authenticated %}
+                        <li class="header-menu-item"><a class="header-menu-link" href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i> Войти</a></li>
+                    {% else %}
+						<li class="header-menu-item"><a class="header-menu-link" href="profile.html"><i class="fa-solid fa-user"></i> Профиль</a></li>
+						<li class="header-menu-item"><a class="header-menu-link" href="favorites.html"><i class="fa-solid fa-heart"></i> Избранное</a></li>
+						<li class="header-menu-item"><a class="header-menu-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> корзина</a></li>
+						{% if user.is_admin or user.is_staff%}
+						{% comment %} <li class="header-menu-item"><a class="header-menu-link" href="{% url "admin:index" %}"><i class="fa-solid"></i> админ панель</a></li> {% endcomment %}
+						{% endif %}
+                    {% endif %}
 					</ul>
 				</nav>
 			</div>

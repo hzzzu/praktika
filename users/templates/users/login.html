@@ -35,8 +35,9 @@
 				</div>
 				<nav class="header-menu-right">
 					<ul class="header-menu-list">
-						<li class="header-menu-item"><a class="header-menu-link" href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i> Войти</a></li>
-						<li class="header-menu-item"><a class="header-menu-link" href="#"><i class="fa-solid fa-cart-shopping"></i> корзина</a></li>
+						{% if not user.is_authenticated %}
+							<li class="header-menu-item"><a class="header-menu-link" href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i> Войти</a></li>
+						{% endif %}
 					</ul>
 				</nav>
 			</div>
@@ -77,7 +78,7 @@
 								<p>{{ error }}</p>
 							</div>
 						{% endfor %}
-						<a href="#"><i class="fa-solid fa-eye fa-xl"></i></a>
+						{% comment %} <a href="#"><i class="fa-solid fa-eye fa-xl"></i></a> {% endcomment %}
 					</div>
 					
 					<div class="login-remember">
