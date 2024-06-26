@@ -38,7 +38,7 @@
 						{% if not user.is_authenticated %}
                         <li class="header-menu-item"><a class="header-menu-link" href="{% url "users:login" %}"><i class="fa-solid fa-right-to-bracket"></i> Войти</a></li>
                     {% else %}
-						<li class="header-menu-item"><a class="header-menu-link" href="profile.html"><i class="fa-solid fa-user"></i> Профиль</a></li>
+						<li class="header-menu-item"><a class="header-menu-link" href="{% url "user:profile" %}"><i class="fa-solid fa-user"></i> Профиль</a></li>
 						<li class="header-menu-item"><a class="header-menu-link" href="favorites.html"><i class="fa-solid fa-heart"></i> Избранное</a></li>
 						<li class="header-menu-item"><a class="header-menu-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> корзина</a></li>
 						{% if user.is_admin or user.is_staff%}
@@ -55,46 +55,74 @@
 			<div class="container-small">
 				<div class="profile-menu">
 					<ul class="profile-menu-list">
-						<li class="profile-item"><a class="profile-menu-link" href="index.html">Главная</a></li>
+						<li class="profile-item"><a class="profile-menu-link" href="{% url "main:index" %}">Главная</a></li>
 						<i class="fa-solid fa-chevron-right"></i>
-						<li class="profile-item"><a class="profile-menu-link" href="profile.html">Личный кабинет</a></li>
+						<li class="profile-item"><a class="profile-menu-link" href="{% url "user:profile" %}">Личный кабинет</a></li>
 					</ul>
 				</div>
 				<div class="profile-menu-history">
 					<ul class="profile-menu-list">
-						<li class="profile-menu-item"><a href="">История заказов</a></li>
-						<li class="profile-menu-item"><a href="profile.html">Личный кабинет</a></li>
-						<li class="profile-menu-item"><a href="index.html">Выйти</a></li>
+						<li class="profile-menu-item"><a href="#">История заказов</a></li>
+						<li class="profile-menu-item"><a href="{% url "user:profile" %}">Личный кабинет</a></li>
+						<li class="profile-menu-item"><a href="{% url "user:logout" %}">Выйти</a></li>
 					</ul>
 				</div>
 				<div class="profile-personal-info">
 					<h1 class="profile-info-title">
 						Персональные данные:
 					</h1>
-					<form action="" class="profile-form">
+					<form action="{% url 'user:profile' %}" method="POST" class="profile-form">
+						{% csrf_token %}
 						<div class="profile-item">
-							<input type="text" placeholder="Имя" required>
-							<input type="text" placeholder="Фамилия">
-							<input type="email" placeholder="E-mail" required>
-							<input type="phone" placeholder="Телефон" required>
+							<input type="text" id="id_first_name" name="first_name" value="{{ form.first_name.value|default_if_none:'' }}" placeholder="Имя" required>
+							{% for error in form.first_name.errors %}
+							<div class="alert">
+								<p>{{ error }}</p>
+							</div>
+							{% endfor %}
+							<input type="text" id="id_last_name" name="last_name" value="{{ form.last_name.value|default_if_none:'' }}" placeholder="Фамилия">
+							{% for error in form.last_name.errors %}
+							<div class="alert">
+								<p>{{ error }}</p>
+							</div>
+							{% endfor %}
+							<input type="text" id="id_username" name="username" value="{{ form.username.value|default_if_none:'' }}" placeholder="Имя пользователя">
+							{% for error in form.username.errors %}
+							<div class="alert">
+								<p>{{ error }}</p>
+							</div>
+							{% endfor %}
+						</div>
+						<div class="profile-item profile-item-second">
+							<input type="email" id="id_email" name="email" value="{{ form.email.value|default_if_none:'' }}" placeholder="E-mail" required>
+							{% for error in form.email.errors %}
+							<div class="alert">
+								<p>{{ error }}</p>
+							</div>
+							{% endfor %}
+							<input type="phone" id="id_phone_number" name="phone_number" value="{{ form.phone_number.value|default_if_none:'' }}" placeholder="Телефон" required>
+							{% for error in form.phone_number.errors %}
+							<div class="alert">
+								<p>{{ error }}</p>
+							</div>
+							{% endfor %}
+						</div>
+						<div class="profile-personal-info">
+							<h1 class="profile-info-title">
+								Адрес доставки:
+							</h1>
+							<div class="profile-item">
+								<input type="text" id="id_town" name="town" value="{{ form.town.value|default_if_none:'' }}" placeholder="Город" required>
+								<input type="text" id="id_street" name="street" value="{{ form.street.value|default_if_none:'' }}" placeholder="Улица" required>
+								<input type="text" id="id_house" name="house" value="{{ form.house.value|default_if_none:'' }}" placeholder="Дом" required>
+							</div>
+							<button type="submit" class="profile-button">
+								ОБНОВИТЬ ИНФОРМАЦИЮ
+							</button>
+							<p class"profile-approval">Заполняя данную форму Вы даёте согласие на обработку персональных данных</p>
 						</div>
 					</form>
-				</div>
-				<div class="profile-personal-info">
-					<h1 class="profile-info-title">
-						Адрес доставки:
-					</h1>
-					<form action="" class="profile-form">
-						<div class="profile-item">
-							<input type="text" placeholder="Город" required>
-							<input type="text" placeholder="Улица" required>
-							<input type="text" placeholder="Дом" required>
-						</div>
-					</form>
-				</div>
-				<button class="profile-button">
-					ОБНОВИТЬ ИНФОРМАЦИЮ
-				</button>
+				</div>		
 			</div>
 		</section>
 	</main>
