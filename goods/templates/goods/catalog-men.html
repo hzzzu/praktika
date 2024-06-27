@@ -77,261 +77,34 @@
 					<div class="col-9">
 						<nav class="catalog-men-navbar">
 							<ul class="catalog-men-list">
-								<li class="catalog-men-item"><a href="" class="catalog-men-link">Цвет</a></li>
-								<a href="" class="catalog-men-link"><i class="fa-solid fa-chevron-down"></i></a></li>
-								<li class="catalog-men-item"><a href="" class="catalog-men-link">Цена</a></li>
-								<a href="" class="catalog-men-link"><i class="fa-solid fa-chevron-down"></i></a></li>
+								<li class="catalog-men-item"><a href="" class="catalog-men-link">Цвет</a><a href="" class="catalog-men-link"><i class="fa-solid fa-chevron-down"></i></a></li>
+								<li class="catalog-men-item"><a href="" class="catalog-men-link">Цена</a><a href="" class="catalog-men-link"><i class="fa-solid fa-chevron-down"></i></a></li>
+								<li class="catalog-men-item"><a href="" class="catalog-men-link">Размер</a><a href="" class="catalog-men-link"><i class="fa-solid fa-chevron-down"></i></a></li>
+								<li class="catalog-men-item"><a href="" class="catalog-men-link">Сортировка</a><a href="" class="catalog-men-link"><i class="fa-solid fa-chevron-down"></i></a></li>
 							</ul>
 						</nav>
 						<div class="catalog-men-flex">
-							<div class="catalog-men-info">
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 9.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Кепка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
+                            {% for product in goods %}
+								<div class="catalog-men-info">
+									<div class="catalog-men-images">
+										<a href="{% url 'goods:product' %}">
+											<img src="{{ product.image.url }}" alt="{{ product.name }}" class="catalog-men-avatar">
+										</a>
+										<a href="#"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
+										<h2 class="catalog-men-text">
+											<a class="catalog-men-title-link" href="{% url 'goods:product' %}">{{ product.name }}</a>
+										</h2>
+										<p class="catalog-men-num">
+											{{ product.price }} руб.
+										</p>
+										<div class="catalog-men-svg">
+											<a href="#"><img src="{% static "deps/media/catalog-men/Ellipse 1.svg" %}" alt="Color:white"></a>
+											<a href="#"><img src="{% static "deps/media/catalog-men/Ellipse 2.svg" %}" alt="Color:blue"></a>
+											<a href="#"><img src="{% static "deps/media/catalog-men/Ellipse 3.svg" %}" alt="Color:beige"></a>
+										</div>
 									</div>
 								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 14.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Балаклава
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 19.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Балаклава
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 23.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Кепка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-							</div>
-							<div class="catalog-men-info">
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 21.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Кепка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 20.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Кепка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 22.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Кепка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 16.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Кепка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-							</div>
-							<div class="catalog-men-info">
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 17.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Панама
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 12.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Панама
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 13.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Панама
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 11.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Панама
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-							</div>
-							<div class="catalog-men-info">
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 24.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Панама
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 25.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Шапка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 26.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Шапка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-								<div class="catalog-men-images">
-									<img src="./media/catalog-men/image 27.jpg" alt="" class="catalog-men-avatar">
-									<a href=""><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
-									<h1 class="catalog-men-text">
-										Шапка
-									</h1>
-									<p class="catalog-men-num">
-										2900 руб
-									</p>
-									<div class="catalog-men-svg">
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt=""></a>
-										<a href=""><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt=""></a>
-									</div>
-								</div>
-							</div>
+							{% endfor %}
 						</div>
 					</div>
 				</div>
