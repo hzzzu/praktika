@@ -61,7 +61,7 @@
 								<i class="fa-solid fa-chevron-right"></i>
 								<li class="catalog-woman-item"><a href="{% url 'goods:catalog-woman' %}" class="catalog-woman-link">Каталог</a></li>
 								<i class="fa-solid fa-chevron-right"></i>
-								<li class="catalog-woman-item"><a href="{% url 'goods:catalog-woman' %}" class="catalog-woman-link">Женщинам</a></li>
+								<a href="{% if product.gender == 'Жен' %}{% url 'goods:catalog-woman' %}{% else %}{% url 'goods:catalog-men' %}{% endif %}" class="catalog-woman-link">{{ gender }}</a>
 							</ul>
 						</nav>
 						<div class="catalog-woman-menu-items">
@@ -87,20 +87,20 @@
 							{% for product in goods %}
 								<div class="catalog-woman-info">
 									<div class="catalog-woman-images">
-										<a href="{% url 'goods:product' %}">
+										<a href="{% url 'goods:product' product.id %}">
 											<img src="{{ product.image.url }}" alt="{{ product.name }}" class="catalog-woman-avatar">
 										</a>
 										<a href="#"><i class="fa-regular fa-heart" style="color: #ffffff;"></i></a>
 										<h2 class="catalog-woman-text">
-											<a class="catalog-woman-title-link" href="{% url 'goods:product' %}">{{ product.name }}</a>
+											<a class="catalog-woman-title-link" href="{% url 'goods:product' product.id %}">{{ product.name }}</a>
 										</h2>
 										<p class="catalog-woman-num">
 											{{ product.price }} руб.
 										</p>
 										<div class="catalog-woman-svg">
-											<a href="#"><img src="{% static "deps/media/catalog-woman/Ellipse 1.svg" %}" alt="Color:white"></a>
-											<a href="#"><img src="{% static "deps/media/catalog-woman/Ellipse 2.svg" %}" alt="Color:blue"></a>
-											<a href="#"><img src="{% static "deps/media/catalog-woman/Ellipse 3.svg" %}" alt="Color:beige"></a>
+											<a href="#"><img src="{% static "deps/media/color_eclipse/Ellipse 1.svg" %}" alt="Color:white"></a>
+											<a href="#"><img src="{% static "deps/media/color_eclipse/Ellipse 2.svg" %}" alt="Color:blue"></a>
+											<a href="#"><img src="{% static "deps/media/color_eclipse/Ellipse 3.svg" %}" alt="Color:beige"></a>
 										</div>
 									</div>
 								</div>
