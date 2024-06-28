@@ -42,7 +42,7 @@
                     {% else %}
 						<li class="header-menu-item"><a class="header-menu-link" href="{% url "users:profile" %}"><i class="fa-solid fa-user"></i> Профиль</a></li>
 						<li class="header-menu-item"><a class="header-menu-link" href="favorites.html"><i class="fa-solid fa-heart"></i> Избранное</a></li>
-						<li class="header-menu-item"><a class="header-menu-link" href="cart.html"><i class="fa-solid fa-cart-shopping"></i> корзина</a></li>
+						<li class="header-menu-item"><a class="header-menu-link" href="{% url "cart:cart_detail" %}"><i class="fa-solid fa-cart-shopping"></i> корзина</a></li>
 						{% if user.is_admin or user.is_staff%}
 						{% comment %} <li class="header-menu-item"><a class="header-menu-link" href="{% url "admin:index" %}"><i class="fa-solid"></i> админ панель</a></li> {% endcomment %}
 						{% endif %}

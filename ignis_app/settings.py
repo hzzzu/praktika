@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'main',
     'goods',
     'users',
-    # 'carts',
+    'carts',
 ]
 
 MIDDLEWARE = [
@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'ignis_app.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'ignisShopDB',
+        'NAME': 'ignisEShopDB',
         'USER': 'arthicsu',
         'PASSWORD': 'ZAQ123wsx',
-        'HOST': '26.214.128.141',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
@@ -122,6 +122,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+DEFAULT_CHARSET = 'utf-8'
+FILE_CHARSET = 'utf-8'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/

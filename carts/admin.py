@@ -1,34 +1,18 @@
 from django.contrib import admin
+from .models import Cart, CartItem
 
-from carts.models import Cart
+class CartItemInline(admin.TabularInline):
+    model = CartItem
+    extra = 0
 
-
-# admin.site.register(Cart)
-class CartTabAdmin(admin.TabularInline):
-    model = Cart
-    fields = "product", "quantity", "created_timestamp"
-    search_fields = "product", "quantity", "created_timestamp"
-    readonly_fields = ("created_timestamp",)
-    extra = 1
-
-
-@admin.register(Cart)
 class CartAdmin(admin.ModelAdmin):
-    list_display = ["user_display", "product_display", "quantity", "created_timestamp", ]
-    list_filter = ["created_timestamp", "user", "product__name", ]
+    list_display = ('id', 'user') 
+    list_filter = ('user',)
+    inlines = [CartItemInline]
 
-    def user_display(self, obj):
-        if obj.user:
-            return str(obj.user)
-        return "Анонимный пользователь"
+class CartItemAdmin(admin.ModelAdmin):
+    list_display = ('id', 'cart', 'product', 'quantity')
+    list_filter = ('product',)
 
-    def product_display(self, obj):
-        return str(obj.product.name)
-
-    # user_display and product_display alter name of columns in admin panel
-    user_display.short_description = "Пользователь"
-    product_display.short_description = "Товар"
-
-
-
-
+admin.site.register(Cart, CartAdmin)
+admin.site.register(CartItem, CartItemAdmin)

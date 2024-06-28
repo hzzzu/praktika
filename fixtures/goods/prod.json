@@ -1,0 +1,578 @@
+[
+  {
+    "model": "goods.products",
+    "pk": 3,
+    "fields": {
+      "name": "Кепка",
+      "slug": "kepka",
+      "description": "Универсальная кепка, сочетающая в себе удобство и стиль. Идеальный аксессуар для создания повседневного образа.",
+      "image": "goods_images/kepka.jpg",
+      "price": "2900.00",
+      "category": 7,
+      "color": "Кофе с молоком меланж",
+      "discount": "0.00",
+      "quantity": 10,
+      "size": 54,
+      "compound": "Состав: 50% Ситнтетика, 50% Полиэстер\r\nПодкладка: 100% Полиэстер\r\nУтеплитель: 0%",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 4,
+    "fields": {
+      "name": "Шляпа",
+      "slug": "shlyapa",
+      "description": "Элегантная шляпа, идеально подходящая для завершения вашего образа. Воплощение утончённого стиля и безупречного вкуса.",
+      "image": "goods_images/shlyapa-2.jpg",
+      "price": "1200.00",
+      "category": 14,
+      "color": "Белый",
+      "discount": "0.00",
+      "quantity": 5,
+      "size": 56,
+      "compound": "Солома - 100%",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 5,
+    "fields": {
+      "name": "Бандана",
+      "slug": "bandana",
+      "description": "Стильная бандана, универсальный аксессуар для любого образа. Добавит вашему стилю нотку оригинальности и свободы.",
+      "image": "goods_images/bandana.jpg",
+      "price": "4800.00",
+      "category": 1,
+      "color": "Серый",
+      "discount": "0.00",
+      "quantity": 7,
+      "size": 57,
+      "compound": "100% шерсть",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 6,
+    "fields": {
+      "name": "Чепик",
+      "slug": "chepik",
+      "description": "Чепик - это головной убор, плотно облегающий голову, с завязками под подбородком. Теплая и уютная шапка, которая станет незаменимой в холодное время года. Лаконичный дизайн дополняет любой зимний гардероб.",
+      "image": "goods_images/chepik.jpg",
+      "price": "4200.00",
+      "category": 13,
+      "color": "Красный",
+      "discount": "0.00",
+      "quantity": 4,
+      "size": 58,
+      "compound": "80% шерсть, 20% нейлон",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 7,
+    "fields": {
+      "name": "Наушники",
+      "slug": "naushniki",
+      "description": "Модные наушники, которые не только согреют уши, но и добавят вашему образу уникальный акцент. Идеальны для холодной погоды.",
+      "image": "goods_images/naushniki.jpg",
+      "price": "2900.00",
+      "category": 11,
+      "color": "Бежевый",
+      "discount": "0.00",
+      "quantity": 30,
+      "size": 56,
+      "compound": "Искусственный мех, 100% полиэстер",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 8,
+    "fields": {
+      "name": "Берет",
+      "slug": "beret",
+      "description": "Классический берет, воплощение французского шика. Идеален для создания романтического и утонченного образа.",
+      "image": "goods_images/beret.jpg",
+      "price": "1940.50",
+      "category": 2,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 19,
+      "size": 56,
+      "compound": "Хлопок - 95%, Полиэстер - 5%",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 9,
+    "fields": {
+      "name": "Кепи",
+      "slug": "kepi",
+      "description": "Современное кепи, которое станет отличным дополнением к вашему гардеробу. Подчеркнет ваш стиль и придаст образу завершенность.",
+      "image": "goods_images/kepi.jpg",
+      "price": "3150.00",
+      "category": 8,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 45,
+      "size": 58,
+      "compound": "50% шерсть, 50% полиэстер",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 10,
+    "fields": {
+      "name": "Панама",
+      "slug": "panama",
+      "description": "Стильная панама, незаменимая в жаркие летние дни. Легкая и практичная, она защитит вас от солнечных лучей и придаст образу свежести.",
+      "image": "goods_images/panama.jpg",
+      "price": "1900.00",
+      "category": 10,
+      "color": "бежевый, белый",
+      "discount": "0.00",
+      "quantity": 6,
+      "size": 58,
+      "compound": "20% хлопок 80% полиэстер",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 11,
+    "fields": {
+      "name": "Шапка-ушанка",
+      "slug": "shapka-ushanka",
+      "description": "Шапка-ушанка с традиционными элементами и современным дизайном. Обеспечит комфорт и тепло в самые суровые зимние дни.",
+      "image": "goods_images/shapka-ushanka.jpg",
+      "price": "2900.00",
+      "category": 12,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 3,
+      "size": 56,
+      "compound": "80% шерсть, 20% нейлон",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 12,
+    "fields": {
+      "name": "Скучная кепка",
+      "slug": "skuchnaya-kepka",
+      "description": "Универсальная кепка, сочетающая в себе удобство и стиль. Идеальный аксессуар для создания повседневного образа.",
+      "image": "goods_images/kepka-2.jpg",
+      "price": "4200.00",
+      "category": 7,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 2,
+      "size": 58,
+      "compound": "50% хлопок, 50% полиэстер",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 13,
+    "fields": {
+      "name": "Кепка с надписью",
+      "slug": "kepka-s-nadpisyu",
+      "description": "Универсальная кепка, сочетающая в себе удобство и стиль. Идеальный аксессуар для создания повседневного образа.",
+      "image": "goods_images/kepka-3.jpg",
+      "price": "2900.00",
+      "category": 7,
+      "color": "Серый, белая надпись",
+      "discount": "0.00",
+      "quantity": 4,
+      "size": 58,
+      "compound": "50% хлопок, 50% полиэстер",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 14,
+    "fields": {
+      "name": "Соломенная шляпа",
+      "slug": "solomennaya-shlyapa",
+      "description": "Элегантная шляпа, идеально подходящая для завершения вашего образа. Воплощение утончённого стиля и безупречного вкуса.",
+      "image": "goods_images/shlyapa_KRXlRXP.jpg",
+      "price": "4200.00",
+      "category": 14,
+      "color": "Бежевый",
+      "discount": "0.00",
+      "quantity": 1,
+      "size": 56,
+      "compound": "100% солома",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 15,
+    "fields": {
+      "name": "Козырек",
+      "slug": "kozyrek",
+      "description": "Кепка без верха называется очень просто — козырек. Это объясняется его предназначением и внешним видом. Плотный, закрывающий глаза от ярких ультрафиолетовых лучей козырек надвигается глубоко на лоб.\r\nТакая кепка представляет собой подобие бейсболки, но без верхней текстильной части.",
+      "image": "goods_images/Koziorek.jpg",
+      "price": "2900.00",
+      "category": 17,
+      "color": "Белый",
+      "discount": "0.00",
+      "quantity": 1,
+      "size": 56,
+      "compound": "50% хлопок, 50% полиэстер",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 16,
+    "fields": {
+      "name": "Элитарная шляпа",
+      "slug": "elitarnaya-shlyapa",
+      "description": "Элитарная шляпа, идеально подходящая для завершения вашего образа. Воплощение утончённого классического стиля и безупречного вкуса.",
+      "image": "goods_images/shlyapa-3.jpg",
+      "price": "3150.00",
+      "category": 14,
+      "color": "Бежевый",
+      "discount": "0.00",
+      "quantity": 2,
+      "size": 60,
+      "compound": "60% солома, 40% полиэстер",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 17,
+    "fields": {
+      "name": "Классная панама",
+      "slug": "klassnaya-panama",
+      "description": "Стильная панама, незаменимая в жаркие летние дни. Легкая и практичная, она защитит вас от солнечных лучей и придаст образу свежести.",
+      "image": "goods_images/panama-2.jpg",
+      "price": "4200.00",
+      "category": 10,
+      "color": "Белый",
+      "discount": "0.00",
+      "quantity": 3,
+      "size": 56,
+      "compound": "20% хлопок, 80% полиэстер",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 18,
+    "fields": {
+      "name": "Повязка на голову",
+      "slug": "povyazka-na-golovu",
+      "description": "Повязка на голову или лента для волос - это аксессуар одежды, который носят в волосах или вокруг лба, обычно для того, чтобы убирать волосы с лица или глаз.",
+      "image": "goods_images/povyzka-na-golovu_wrlTXPI.jpg",
+      "price": "2900.00",
+      "category": 18,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 4,
+      "size": 60,
+      "compound": "80% полиэстер, 20% нейлон",
+      "gender": "Жен"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 19,
+    "fields": {
+      "name": "Шляпа джинсовая",
+      "slug": "Denim-hat",
+      "description": "Эффектная и роскошная женская шляпа с большими полями выполнена из джинсового хлопка.",
+      "image": "goods_images/blue-panama.jpg",
+      "price": "1000.00",
+      "category": 14,
+      "color": "Серый",
+      "discount": "0.00",
+      "quantity": 17,
+      "size": 45,
+      "compound": "Джинсовый хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 20,
+    "fields": {
+      "name": "ignis балаклава",
+      "slug": "ignis_balaklava",
+      "description": "Супе стильная балаклава, универсальный аксессуар для любого образа. Добавит вашему стилю нотку оригинальности и свободы.",
+      "image": "goods_images/blue-balaklava.jpg",
+      "price": "1990.00",
+      "category": 1,
+      "color": "Синий",
+      "discount": "0.00",
+      "quantity": 10,
+      "size": 37,
+      "compound": "100% шерсть",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 21,
+    "fields": {
+      "name": "ignis шляпа",
+      "slug": "ignis-shlyapa",
+      "description": "Элегантная шляпа, идеально подходящая для завершения вашего образа. Воплощение утончённого стиля и безупречного вкуса.",
+      "image": "goods_images/blue-hat.jpg",
+      "price": "2900.00",
+      "category": 14,
+      "color": "Бежевый",
+      "discount": "0.00",
+      "quantity": 3,
+      "size": 45,
+      "compound": "Натуральная солома - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 22,
+    "fields": {
+      "name": "Джинсовая шляпа",
+      "slug": "dzhinsovaya-shlyapa",
+      "description": "Эффектная и роскошная женская шляпа с большими полями выполнена из джинсового хлопка.",
+      "image": "goods_images/blue-panama-2.jpg",
+      "price": "3299.00",
+      "category": 14,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 11,
+      "size": 43,
+      "compound": "Джинсовый хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 23,
+    "fields": {
+      "name": "Чёрная балаклава",
+      "slug": "chyornaya-balaklava",
+      "description": "Головной убор (вязаная шапка, шлем), закрывающий голову, лоб и лицо, оставляя небольшую прорезь для глаз, рта или для овала лица.",
+      "image": "goods_images/black-balaklava.jpg",
+      "price": "1550.00",
+      "category": 19,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 5,
+      "size": 54,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 24,
+    "fields": {
+      "name": "Классическая кепка",
+      "slug": "klassicheskaya-kepka",
+      "description": "Мужская кепка классической формы",
+      "image": "goods_images/blue-cap.jpg",
+      "price": "1990.00",
+      "category": 7,
+      "color": "Голубой",
+      "discount": "0.00",
+      "quantity": 20,
+      "size": 36,
+      "compound": "Полиэстер - 70%\r\nХлопок 30%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 25,
+    "fields": {
+      "name": "Большая панама",
+      "slug": "bolshaya-panama",
+      "description": "Панама является универсальным головным убором, который подходит для всех.",
+      "image": "goods_images/blue-panama-2_xzLQut4.jpg",
+      "price": "4990.00",
+      "category": 10,
+      "color": "Тёмно-синий",
+      "discount": "0.00",
+      "quantity": 5,
+      "size": 56,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 26,
+    "fields": {
+      "name": "Серая балаклава",
+      "slug": "seraya-balaklava",
+      "description": "Головной убор (вязаная шапка, шлем), закрывающий голову, лоб и лицо, оставляя небольшую прорезь для глаз, рта или для овала лица.",
+      "image": "goods_images/gray-balaklava.jpg",
+      "price": "1990.00",
+      "category": 19,
+      "color": "Серый",
+      "discount": "0.00",
+      "quantity": 8,
+      "size": 32,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 27,
+    "fields": {
+      "name": "Кепка \"Стиляга\"",
+      "slug": "kepka-stilyaga",
+      "description": "Мягкий плоский головной убор с небольшим мягким козырьком и без застежки сзади.",
+      "image": "goods_images/gray-cap_e403nPp.jpg",
+      "price": "2590.00",
+      "category": 7,
+      "color": "Хаки",
+      "discount": "0.00",
+      "quantity": 3,
+      "size": 30,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 28,
+    "fields": {
+      "name": "Кепка с принтом",
+      "slug": "kepka-s-printom",
+      "description": "Мягкий головной убор с небольшим козырьком и без застежки сзади.",
+      "image": "goods_images/white-cap_GhyZiin.jpg",
+      "price": "2490.00",
+      "category": 7,
+      "color": "Черный, белый",
+      "discount": "0.00",
+      "quantity": 12,
+      "size": 23,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 29,
+    "fields": {
+      "name": "Черная кепка",
+      "slug": "chernaya-kepka",
+      "description": "Классическая, лёгкая кепка чёрного цвета",
+      "image": "goods_images/black-cap.jpg",
+      "price": "2490.00",
+      "category": 7,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 9,
+      "size": 43,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 30,
+    "fields": {
+      "name": "Розовая кепка",
+      "slug": "rozovaya-kepka",
+      "description": "Розовая кепка с принтом, для настоящего мужчины",
+      "image": "goods_images/red-cap.jpg",
+      "price": "2490.00",
+      "category": 7,
+      "color": "Розовый, белый",
+      "discount": "0.00",
+      "quantity": 23,
+      "size": 32,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 31,
+    "fields": {
+      "name": "Пляжная шляпка",
+      "slug": "plyazhnaya-shlyapka",
+      "description": "Легкая шляпа со шлемообразной тульей и слегка покатыми неширокими полями.",
+      "image": "goods_images/white-hat.jpg",
+      "price": "11990.00",
+      "category": 14,
+      "color": "Бежевый, синий",
+      "discount": "0.00",
+      "quantity": 3,
+      "size": 37,
+      "compound": "Солома - 90%\r\nТкань - 10%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 32,
+    "fields": {
+      "name": "Короткая шапка",
+      "slug": "korotkaya-shapka",
+      "description": "Короткая шапка, пик моды",
+      "image": "goods_images/black-shapka-2.jpg",
+      "price": "3990.00",
+      "category": 13,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 6,
+      "size": 54,
+      "compound": "Хлопок - 70%\r\nПолиэстер - 30%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 33,
+    "fields": {
+      "name": "Дизайнерская шапка",
+      "slug": "dizajnerskaya-shapka",
+      "description": "Дизайнерская шапка чёрного цвета",
+      "image": "goods_images/black-shapka.jpg",
+      "price": "3990.00",
+      "category": 13,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 5,
+      "size": 26,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  },
+  {
+    "model": "goods.products",
+    "pk": 34,
+    "fields": {
+      "name": "Чёрная панама",
+      "slug": "chyornaya-panama",
+      "description": "Чёрная панама для мужчин",
+      "image": "goods_images/black-panama.jpg",
+      "price": "4990.00",
+      "category": 10,
+      "color": "Чёрный",
+      "discount": "0.00",
+      "quantity": 7,
+      "size": 54,
+      "compound": "Хлопок - 100%",
+      "gender": "Муж"
+    }
+  }
+]

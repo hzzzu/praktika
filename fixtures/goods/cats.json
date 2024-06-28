@@ -1,0 +1,97 @@
+[
+  {
+    "model": "goods.categories",
+    "pk": 1,
+    "fields": { "name": "Бандана", "slug": "bandana" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 2,
+    "fields": { "name": "Берет", "slug": "beret" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 3,
+    "fields": { "name": "Вуалетка", "slug": "vualetka" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 4,
+    "fields": { "name": "Жокейка", "slug": "zhokejka" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 5,
+    "fields": { "name": "Картуз", "slug": "kartuz" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 6,
+    "fields": { "name": "Каска", "slug": "kaska" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 7,
+    "fields": { "name": "Кепка", "slug": "kepka" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 8,
+    "fields": { "name": "Кепи", "slug": "kepi" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 9,
+    "fields": { "name": "Капор", "slug": "kapor" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 10,
+    "fields": { "name": "Панама", "slug": "panama" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 11,
+    "fields": { "name": "Наушники", "slug": "naushniki" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 12,
+    "fields": { "name": "Шапка-ушанка", "slug": "shapka-ushanka" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 13,
+    "fields": { "name": "Шапка", "slug": "shapka" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 14,
+    "fields": { "name": "Шляпа", "slug": "shlyapa" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 15,
+    "fields": { "name": "Новое", "slug": "novoe" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 17,
+    "fields": { "name": "Козырек", "slug": "kozyrek" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 18,
+    "fields": { "name": "Повязка на голову", "slug": "povyazka-na-golovu" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 19,
+    "fields": { "name": "Балаклава", "slug": "balaklava" }
+  },
+  {
+    "model": "goods.categories",
+    "pk": 20,
+    "fields": { "name": "Посмотреть всё", "slug": "all" }
+  }
+]

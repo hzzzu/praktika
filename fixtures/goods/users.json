@@ -1,0 +1,134 @@
+[
+  {
+    "model": "users.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$BlnEpd1ASX6kaLx1hxmDqj$n/nQzu20+7hVFARKhxM4Yp0keeN65BuvyEhmbEGHaOo=",
+      "last_login": "2024-06-27T10:57:15.336Z",
+      "is_superuser": true,
+      "username": "arthicsu",
+      "first_name": "Никита",
+      "last_name": "Рощин",
+      "email": "ronivl@yandex.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2024-06-24T19:35:38.868Z",
+      "phone_number": "89621370605",
+      "town": "г.Брянск",
+      "street": "Костычева",
+      "house": "55",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 6,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$r6WFadL5CecaGvTcz4UBsU$C6RkP5EgWQUf3qD+EsjbMD41UTT9QZVHst+nuIkVZjM=",
+      "last_login": "2024-06-26T12:00:30.832Z",
+      "is_superuser": false,
+      "username": "art0m",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-25T17:53:49.527Z",
+      "phone_number": "88005553535",
+      "town": null,
+      "street": null,
+      "house": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 8,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$8rhHtlxq1O4wfxbE2bMxrp$iOq+3t+l7Dj8AucB6Or8394O30Xg+3BaWagQOcMBwOc=",
+      "last_login": "2024-06-28T13:57:09.750Z",
+      "is_superuser": false,
+      "username": "elkst",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-26T12:03:53.843Z",
+      "phone_number": "8800555356",
+      "town": null,
+      "street": null,
+      "house": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 9,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$pLaHQmkwDHMNt5t1fGzD7j$Hyf3mUXDq4OpYeZuecEHG6wA1wBaAxuWy43GyLG4DbA=",
+      "last_login": "2024-06-28T09:39:09.313Z",
+      "is_superuser": false,
+      "username": "elkstP",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-26T12:06:40.230Z",
+      "phone_number": "8800555357",
+      "town": null,
+      "street": null,
+      "house": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 11,
+    "fields": {
+      "password": "pbkdf2_sha256$720000$LiRkq4Y5ysB9xLyffP8SlE$f+Ned0WYS8SsVK9x6h0chAoqzdQEKftS2rD1XeJFMfE=",
+      "last_login": "2024-06-26T19:32:21.265Z",
+      "is_superuser": false,
+      "username": "Pavel",
+      "first_name": "",
+      "last_name": "",
+      "email": "",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-26T19:31:15.745Z",
+      "phone_number": "88005553232",
+      "town": null,
+      "street": null,
+      "house": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "users.user",
+    "pk": 14,
+    "fields": {
+      "password": "pbkdf2_sha256$600000$9ztZXDVKlvXF3D6bDsK8gK$7/el8sVyiKEQSUIph36I/MUDIDhuG6xdYLwL5EHK8B4=",
+      "last_login": "2024-06-26T21:52:52.296Z",
+      "is_superuser": false,
+      "username": "YaZaebalsya",
+      "first_name": "Я",
+      "last_name": "Заебался",
+      "email": "hijoe2952@gmail.com",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2024-06-26T21:51:59.636Z",
+      "phone_number": "88005553535",
+      "town": "г.Брянск",
+      "street": "Костычева",
+      "house": "1",
+      "groups": [],
+      "user_permissions": []
+    }
+  }
+]
