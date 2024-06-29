@@ -42,7 +42,7 @@
                             <li class="header-menu-item"><a class="header-menu-link" href="favorites.html"><i class="fa-solid fa-heart"></i> Избранное</a></li>
                             <li class="header-menu-item"><a class="header-menu-link" href="{% url "cart:cart_detail" %}"><i class="fa-solid fa-cart-shopping"></i> корзина</a></li>
                             {% if user.is_admin or user.is_staff%}
-                            {% comment %} <li class="header-menu-item"><a class="header-menu-link" href="{% url "admin:index" %}"><i class="fa-solid"></i> админ панель</a></li> {% endcomment %}
+                            <li class="header-menu-item"><a class="header-menu-link" href="{% url "admin:index" %}"><i class="fa-solid"></i> админ панель</a></li>
                             {% endif %}
                         {% endif %}
                     </ul>
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="cart-cash">
                                     <input type="radio" name="delivery" value="nova_poshta" id="nova_poshta">
-                                    <label for="nova_poshta" class="cart-huy">Новая Почта</label>
+                                    <label for="nova_poshta" class="cart-huy">Почта России</label>
                                 </div>
                             </div>
                             <p class="cart-data-text">
@@ -135,11 +135,11 @@
                                 <div class="cart-cash">
                                     <input type="radio" name="payment" value="transfer" id="transfer" checked>
                                     <label for="transfer" class="cart-huy">Денежным переводом</label>
-                                    <img src="{% static 'media/cart/Combined-Shape.svg' %}" alt="" class="cart-mir">
+                                    <img src="{% static 'deps/media/cart/Combined-Shape.svg' %}" alt="" class="cart-mir">
                                 </div>
                                 <div class="cart-cash">
                                     <input type="radio" name="payment" value="cash_on_delivery" id="cash_on_delivery">
-                                    <label for="cash_on_delivery" class="cart-huy">Наложенным платежом в отделении Новой Почты</label>
+                                    <label for="cash_on_delivery" class="cart-huy">Наложенным платежом в отделении Почты России</label>
                                 </div>
                             </div>
                             <div class="cart-offer">
